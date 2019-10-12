@@ -45,7 +45,7 @@ const Login = withFormik({
     })
     .then(res => {
       localStorage.setItem('token', res.data.payload);
-      // props.history.push('/friends')
+      props.history.push('/bubblePage')
     })
   }
 })(LoginForm)

@@ -13,7 +13,7 @@ const PrivateRoute = (props) => (
             localStorage.getItem('token') ? (
                 <BubblePage {...props} />
             ) : (
-                <Redirect to='login'/>
+                <Redirect to='/'/> //login
             )
         }
     />
