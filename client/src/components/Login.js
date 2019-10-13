@@ -2,6 +2,7 @@ import React from "react";
 import { withFormik, Form, Field } from 'formik';
 import * as Yup from 'yup';
 import axios from 'axios';
+import './Login.css';
 
 const LoginForm = ({errors, touched}) => {
   // make a post request to retrieve a token from the api
@@ -9,7 +10,7 @@ const LoginForm = ({errors, touched}) => {
   return (
     <Form className='login-form'>
       <h1>Welcome to the Bubble App!</h1>
-      <p>Log In</p>
+      <p><strong>Log In</strong></p>
       <div>
         {touched.userName && errors.userName && <p>{errors.userName}</p>}
         <Field className='field' type='text' name='userName' placeholder='User Name'/>
@@ -18,7 +19,9 @@ const LoginForm = ({errors, touched}) => {
         {touched.userPassword && errors.userPassword && <p>{errors.userPassword}</p>}
         <Field className='field' type='password' name='userPassword' placeholder='Password'/>
       </div>
-      <button type='submit'>Submit</button>
+      <div>
+        <button type='submit'>Submit</button>
+      </div>
     </Form>
   );
 };
