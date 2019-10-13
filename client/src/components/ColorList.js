@@ -39,7 +39,14 @@ const ColorList = ({ colors, updateColors }) => {
       .delete(`http://localhost:5000/api/colors/${color.id}`)
       .then(res => console.log(res))
       .catch(err => console.log(err))
+    
+    axiosWithAuth()
+      .get(`http://localhost:5000/api/colors`)
+      .then((res) => {
+        updateColors(res.data)
+      })
   };
+
 
   return (
     <div className="colors-wrap">
