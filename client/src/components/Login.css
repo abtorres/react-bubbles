@@ -1,0 +1,17 @@
+.login-form {
+    background-image: url('../assets/images/LoginImg.png');
+    margin: 0;
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.login-form .field {
+    margin: 5px 0px;
+    width: 20%;
+}
+
+.login-form button {
+    margin-top: 5px;
+}
